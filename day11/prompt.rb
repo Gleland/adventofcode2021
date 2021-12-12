@@ -74,9 +74,7 @@ end
       affected_neighbors += neigh
     end
     # increment affected neighbors
-    affected_neighbors.each do |r,c|
-      @grid[r][c] += 1
-    end
+    increment_neighbors(affected_neighbors)
     if newly_flashed_octopi.empty?
       more_flashes_to_count = false
     end
